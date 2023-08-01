@@ -61,7 +61,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       aspectRatio: _controller.value.aspectRatio,
       child: VideoPlayer(_controller),
     )
-        : CircularProgressIndicator();
+        : const CircularProgressIndicator();
   }
 }
 
@@ -78,13 +78,13 @@ class MyApp extends StatelessWidget {
       const Color.fromRGBO(176, 199, 220, 1.0),
     ],
   );
-  final Gradient gradientBackground2 = LinearGradient(
+  final Gradient gradientBackground2 = const LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     stops: [0.0, 0.96],
     colors: [
-      const Color.fromRGBO(28, 92, 153, 0.8),
-      const Color.fromRGBO(28, 92, 153, 0),
+      Color.fromRGBO(28, 92, 153, 0.8),
+      Color.fromRGBO(28, 92, 153, 0),
     ],
   );
   void _showNotifyMeDialog(BuildContext context) {
@@ -101,13 +101,14 @@ class MyApp extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pop(); // Close the dialog when "x" icon is tapped
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.close,
                       color: Colors.black,
                     ),
                   ),
                 ],),
-              DefaultTextStyle(
+              SizedBox(height: 10,),
+              const DefaultTextStyle(
                 style: TextStyle(
                     fontFamily: 'Poppins',
                     fontSize: 16,
@@ -124,75 +125,69 @@ class MyApp extends StatelessWidget {
           content: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "First Name",
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 15,
-                          fontWeight: FontWeight.w100,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 8),
-                      Container(
-                        height: 36,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                            color: Color.fromRGBO(33, 33, 33, 0.4),
-                            width: 1,
-                          ),
-                        ),
-                      ),
-                    ],
+                  const Text(
+                    "First Name",
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w100,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Last Name",
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 15,
-                          fontWeight: FontWeight.w100,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.black,
-                        ),
-                        textAlign: TextAlign.center,
+                  const SizedBox(height: 8),
+                  Container(
+                    height: 36,
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(
+                        color: const Color.fromRGBO(33, 33, 33, 0.4),
+                        width: 1,
                       ),
-                      SizedBox(height: 8),
-                      Container(
-                        height: 36,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                            color: Color.fromRGBO(33, 33, 33, 0.4),
-                            width: 1,
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
+                    "Last Name",
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w100,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  Container(
+                    height: 36,
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(
+                        color: const Color.fromRGBO(33, 33, 33, 0.4),
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
                     "Email Address",
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -203,7 +198,7 @@ class MyApp extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Container(
                     height: 36,
                     width: double.maxFinite,
@@ -211,7 +206,7 @@ class MyApp extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
-                        color: Color.fromRGBO(33, 33, 33, 0.4),
+                        color: const Color.fromRGBO(33, 33, 33, 0.4),
                         width: 1,
                       ),
                     ),
@@ -221,7 +216,7 @@ class MyApp extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Phone Number",
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -232,7 +227,7 @@ class MyApp extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Container(
                     height: 36,
                     width: double.maxFinite,
@@ -240,7 +235,7 @@ class MyApp extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
-                        color: Color.fromRGBO(33, 33, 33, 0.4),
+                        color: const Color.fromRGBO(33, 33, 33, 0.4),
                         width: 1,
                       ),
                     ),
@@ -250,7 +245,7 @@ class MyApp extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Note",
                     style: TextStyle(
                       fontFamily: 'Poppins',
@@ -261,7 +256,7 @@ class MyApp extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Container(
                     height: 100,
                     width: double.maxFinite,
@@ -269,7 +264,7 @@ class MyApp extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
-                        color: Color.fromRGBO(33, 33, 33, 0.4),
+                        color: const Color.fromRGBO(33, 33, 33, 0.4),
                         width: 1,
                       ),
                     ),
@@ -282,23 +277,135 @@ class MyApp extends StatelessWidget {
             Center(
               child:  ElevatedButton(
                 onPressed: () {
-                  // Handle submit button tap
-                  Navigator.of(context).pop(); // Close the dialog when submit button is tapped
+                  _showThanksDialog(context, isFromNotifyMe: true); // Pass the parameter isFromNotifyMe as true
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFF000000), // Set button color to black
+                  backgroundColor: const Color(0xFF000000), // Set button color to black
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  minimumSize: Size(200, 36),
+                  minimumSize: const Size(200, 41),
                 ),
-                child: Text(
+                child: const Text(
                   'Submit',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
                   ),
                 ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _showThanksDialog(BuildContext context, {bool isFromNotifyMe = false}) async {
+    // Check if _showThanksDialog is called from _showNotifyMeDialog
+    if (isFromNotifyMe) {
+      // Close the _showNotifyMeDialog
+      Navigator.of(context).pop();
+    }
+
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(
+                'assets/greentick.022.gif',
+                height: 75,
+                width: 75,
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                'Thank you for your Interest',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+
+  void _showSubscribeDialog(BuildContext context) async {
+
+    await showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop(); // Close the dialog when "x" icon is tapped
+                    },
+                    child: const Icon(
+                      Icons.close,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],),
+              const SizedBox(height: 16),
+              Text(
+                'Subscribe to our Newsletter',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 20,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 16),
+              Container(
+                height: 36,
+                child: TextField(
+                  style: const TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: 'Enter your Email',
+                    hintStyle: const TextStyle(color: Colors.grey),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: const BorderSide(color: Colors.black, width: 2),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
+                      borderSide: const BorderSide(color: Colors.black, width: 2),
+                    ),
+                    contentPadding: const EdgeInsets.all(16),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            Center(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  elevation: 0, // Remove the button shadow
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  minimumSize: const Size(150, 36),
+                ),
+                onPressed: () {
+                  _showThanksDialog(context, isFromNotifyMe: true);
+                },
+                child: Text('Subscribe'),
               ),
             ),
           ],
@@ -397,10 +504,9 @@ class MyApp extends StatelessWidget {
                           child: Builder(
                             builder: (context) => ElevatedButton(
                               onPressed: () {
-                                _showNotifyMeDialog(context); // Call the function to show dialog
-                              },
+                                _showThanksDialog(context);                              },
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.black,
+                                backgroundColor: Colors.black,
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
@@ -433,23 +539,27 @@ class MyApp extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start    ,
                     children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          _showNotifyMeDialog(context);                          print('Another Elevated Button tapped!');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
-                          elevation: 0, // Remove the button shadow
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          minimumSize: const Size(100, 10), // Set height and width
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 16,
-                            horizontal: 20, // Adjust the padding here
-                          ),
-                        ),
-                        child: const Text('Partner With Us?'),
+                      Builder(
+                        builder: (context) {
+                          return ElevatedButton(
+                            onPressed: () {
+                              _showNotifyMeDialog(context);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
+                              elevation: 0, // Remove the button shadow
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              minimumSize: const Size(100, 10), // Set height and width
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 16,
+                                horizontal: 20, // Adjust the padding here
+                              ),
+                            ),
+                            child: const Text('Partner With Us?'),
+                          );
+                        }
                       ),
                     ],
                   ),
@@ -508,7 +618,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -540,20 +650,23 @@ class MyApp extends StatelessWidget {
                         Row(
                           children: [
                             const SizedBox(width: 150),
-                            ElevatedButton(
-                              onPressed: () {
-                                // Handle button tap
-                                print('Elevated Button tapped!');
-                              },
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.black,
-                                elevation: 0, // Remove the button shadow
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                minimumSize: const Size(150, 36),
-                              ),
-                              child: const Text('Subscribe'),
+                            Builder(
+                              builder: (context) {
+                                return ElevatedButton(
+                                  onPressed: () {
+                                    _showSubscribeDialog(context);
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.black,
+                                    elevation: 0, // Remove the button shadow
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                    minimumSize: const Size(150, 36),
+                                  ),
+                                  child: const Text('Subscribe'),
+                                );
+                              }
                             ),
                           ],
                         ),
@@ -644,73 +757,92 @@ class MyApp extends StatelessWidget {
                   ],
                 ),
                 Container(
-                    color: const Color(0xFF222222),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsets.only(left: 15.0),
-                              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(height: 20,),
-                                  Text("CONTACT US",style: TextStyle(color: Colors.white),),
-                                  SizedBox(height: 15,),
-                                  Text("PARTNER WITH US",style: TextStyle(color: Colors.white),),
-                                  SizedBox(height: 15,),
-                                  Text("JOIN US",style: TextStyle(color: Colors.white),),
-                                ],
-                              ),
+                  color: const Color(0xFF222222),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(height: 20,),
+                                Builder(
+                                  builder: (context) {
+                                    return GestureDetector(
+                                      onTap: () {
+                                        _showNotifyMeDialog(context);
+                                      },
+                                      child: Text("CONTACT US",style: TextStyle(color: Colors.white),),
+                                    );
+                                  }
+                                ),
+                                SizedBox(height: 15,),
+                                Builder(
+                                  builder: (context) {
+                                    return GestureDetector(
+                                      onTap: () {
+                                        _showNotifyMeDialog(context);
+                                      },
+                                      child: Text("PARTNER WITH US",style: TextStyle(color: Colors.white),),
+                                    );
+                                  }
+                                ),
+                                SizedBox(height: 15,),
+                                Text("JOIN US",style: TextStyle(color: Colors.white),),
+                              ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 15.0),
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    'assets/tech logo white png.png',
-                                    width: 100,
-                                    height: 70,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        'assets/img_2.png',
-                                        width: 30,height: 30,
-                                      ),
-                                      const SizedBox(width: 10,),
-                                      Image.asset(
-                                        'assets/img_3.png',
-                                        width: 30,height: 30,
-                                      ),
-                                      const SizedBox(width: 10,),
-                                      Image.asset(
-                                        'assets/img_4.png',
-                                        width: 30,height: 30,
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15.0),
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'assets/tech logo white png.png',
+                                  width: 100,
+                                  height: 70,
+                                ),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                      'assets/img_2.png',
+                                      width: 30,height: 30,
+                                    ),
+                                    const SizedBox(width: 10,),
+                                    Image.asset(
+                                      'assets/img_3.png',
+                                      width: 30,height: 30,
+                                    ),
+                                    const SizedBox(width: 10,),
+                                    Image.asset(
+                                      'assets/img_4.png',
+                                      width: 30,height: 30,
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        SizedBox(height: 30,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text("FUTURITE INNOVATIONS PRIVATE LIMITED",style: TextStyle(color: Colors.white),),
-                            Icon(
-                              Icons.copyright,
-                              color: Colors.white,
-                              size: 16,
-                            ),
-                            Text("2023",style: TextStyle(color: Colors.white))
-                          ],
-                        )
-                      ],
-                    ),
-                )
+                          ),                        ],
+                      ),
+                      SizedBox(height: 30,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("FUTURITE INNOVATIONS PRIVATE LIMITED",style: TextStyle(color: Colors.white),),
+                          Icon(
+                            Icons.copyright,
+                            color: Colors.white,
+                            size: 16,
+                          ),
+                          Text("2023",style: TextStyle(color: Colors.white))
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+
               ],
             ),
           ),
@@ -719,23 +851,35 @@ class MyApp extends StatelessWidget {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                ListTile(
-                  title: const Text('CONTACT US'),
-                  onTap: () {
-                    // Handle item 1 tap
-                  },
+                Builder(
+                  builder: (context) {
+                    return ListTile(
+                      title: const Text('CONTACT US'),
+                      onTap: () {
+                        _showNotifyMeDialog(context);
+                      },
+                    );
+                  }
                 ),
-                ListTile(
-                  title: const Text('PARTNER WITH US'),
-                  onTap: () {
-                    // Handle item 2 tap
-                  },
+                Builder(
+                  builder: (context) {
+                    return ListTile(
+                      title: const Text('PARTNER WITH US'),
+                      onTap: () {
+                        _showNotifyMeDialog(context);
+                      },
+                    );
+                  }
                 ),
-                ListTile(
-                  title: const Text('JOIN US'),
-                  onTap: () {
-                    // Handle item 2 tap
-                  },
+                Builder(
+                  builder: (context) {
+                    return ListTile(
+                      title: const Text('JOIN US'),
+                      onTap: () {
+                        _showNotifyMeDialog(context);
+                      },
+                    );
+                  }
                 ),              ],
             ),
           ),
