@@ -61,7 +61,10 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       aspectRatio: _controller.value.aspectRatio,
       child: VideoPlayer(_controller),
     )
-        : const CircularProgressIndicator();
+        : Container(
+        height: 10,
+        width: 10,
+        child: const CircularProgressIndicator());
   }
 }
 
@@ -122,156 +125,178 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "First Name",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w100,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "First Name",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w100,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    height: 36,
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(
-                        color: const Color.fromRGBO(33, 33, 33, 0.4),
-                        width: 1,
+                    const SizedBox(height: 8),
+                    Container(
+                      height: 36,
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          contentPadding: const EdgeInsets.all(16),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Last Name",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w100,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Last Name",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w100,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    height: 36,
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(
-                        color: const Color.fromRGBO(33, 33, 33, 0.4),
-                        width: 1,
+                    const SizedBox(height: 8),
+                    Container(
+                      height: 36,
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          contentPadding: const EdgeInsets.all(16),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Email Address",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w100,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Email Address",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w100,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    height: 36,
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(
-                        color: const Color.fromRGBO(33, 33, 33, 0.4),
-                        width: 1,
+                    const SizedBox(height: 8),
+                    Container(
+                      height: 36,
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          contentPadding: const EdgeInsets.all(16),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Phone Number",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w100,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Phone Number",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w100,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    height: 36,
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(
-                        color: const Color.fromRGBO(33, 33, 33, 0.4),
-                        width: 1,
+                    const SizedBox(height: 8),
+                    Container(
+                      height: 36,
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          contentPadding: const EdgeInsets.all(16),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Note",
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 15,
-                      fontWeight: FontWeight.w100,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.black,
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Note",
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w100,
+                        fontStyle: FontStyle.italic,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    height: 100,
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(
-                        color: const Color.fromRGBO(33, 33, 33, 0.4),
-                        width: 1,
+                    const SizedBox(height: 8),
+                    Container(
+                      height: 100,
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                          ),
+                          contentPadding: const EdgeInsets.all(16),
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
           actions: [
             Center(
@@ -880,7 +905,8 @@ class MyApp extends StatelessWidget {
                       },
                     );
                   }
-                ),              ],
+                ),
+              ],
             ),
           ),
         ),
