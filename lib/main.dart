@@ -28,6 +28,36 @@ class EclipseClipper extends CustomClipper<Path> {
     return false;
   }
 }
+class CustomBackground extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 503,
+      height: 497,
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [
+            Color.fromRGBO(0, 92, 153, 0.8),
+            Color.fromRGBO(0, 92, 153, 0),
+          ],
+          stops: [
+            0.00,
+            0.96,
+          ],
+          begin: Alignment(-0.07, -0.36),
+          end: Alignment(1.24, 1.24),
+        ),
+        borderRadius: BorderRadius.circular(503),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            blurRadius: 150,
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class VideoPlayerScreen extends StatefulWidget {
   @override
@@ -60,11 +90,11 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
         ? AspectRatio(
       aspectRatio: _controller.value.aspectRatio,
       child: VideoPlayer(_controller),
-    )
-        : Container(
-        height: 10,
-        width: 10,
-        child: const CircularProgressIndicator());
+      )
+        : const SizedBox(
+        height: 1,
+        width: 1,
+        child: CircularProgressIndicator());
   }
 }
 
@@ -110,7 +140,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ],),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               const DefaultTextStyle(
                 style: TextStyle(
                     fontFamily: 'Poppins',
@@ -147,17 +177,17 @@ class MyApp extends StatelessWidget {
                     const SizedBox(height: 8),
                     Container(
                       height: 36,
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
+                      child: const TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintStyle: const TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
-                          contentPadding: const EdgeInsets.all(16),
+                          contentPadding: EdgeInsets.all(16),
                         ),
                       ),
                     ),
@@ -180,17 +210,17 @@ class MyApp extends StatelessWidget {
                     const SizedBox(height: 8),
                     Container(
                       height: 36,
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
+                      child: const TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintStyle: const TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
-                          contentPadding: const EdgeInsets.all(16),
+                          contentPadding: EdgeInsets.all(16),
                         ),
                       ),
                     ),
@@ -213,17 +243,17 @@ class MyApp extends StatelessWidget {
                     const SizedBox(height: 8),
                     Container(
                       height: 36,
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
+                      child: const TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintStyle: const TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
-                          contentPadding: const EdgeInsets.all(16),
+                          contentPadding: EdgeInsets.all(16),
                         ),
                       ),
                     ),
@@ -246,17 +276,17 @@ class MyApp extends StatelessWidget {
                     const SizedBox(height: 8),
                     Container(
                       height: 36,
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
+                      child: const TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintStyle: const TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
-                          contentPadding: const EdgeInsets.all(16),
+                          contentPadding: EdgeInsets.all(16),
                         ),
                       ),
                     ),
@@ -279,17 +309,17 @@ class MyApp extends StatelessWidget {
                     const SizedBox(height: 8),
                     Container(
                       height: 100,
-                      child: TextField(
-                        style: const TextStyle(color: Colors.white),
+                      child: const TextField(
+                        style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                          hintStyle: const TextStyle(color: Colors.grey),
+                          hintStyle: TextStyle(color: Colors.grey),
                           border: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.black, width: 2),
+                            borderSide: BorderSide(color: Colors.black, width: 2),
                           ),
-                          contentPadding: const EdgeInsets.all(16),
+                          contentPadding: EdgeInsets.all(16),
                         ),
                       ),
                     ),
@@ -385,7 +415,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ],),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Subscribe to our Newsletter',
                 style: TextStyle(
                   fontFamily: 'Poppins',
@@ -430,7 +460,7 @@ class MyApp extends StatelessWidget {
                 onPressed: () {
                   _showThanksDialog(context, isFromNotifyMe: true);
                 },
-                child: Text('Subscribe'),
+                child: const Text('Subscribe'),
               ),
             ),
           ],
@@ -793,30 +823,30 @@ class MyApp extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                SizedBox(height: 20,),
+                                const SizedBox(height: 20,),
                                 Builder(
                                   builder: (context) {
                                     return GestureDetector(
                                       onTap: () {
                                         _showNotifyMeDialog(context);
                                       },
-                                      child: Text("CONTACT US",style: TextStyle(color: Colors.white),),
+                                      child: const Text("CONTACT US",style: TextStyle(color: Colors.white),),
                                     );
                                   }
                                 ),
-                                SizedBox(height: 15,),
+                                const SizedBox(height: 15,),
                                 Builder(
                                   builder: (context) {
                                     return GestureDetector(
                                       onTap: () {
                                         _showNotifyMeDialog(context);
                                       },
-                                      child: Text("PARTNER WITH US",style: TextStyle(color: Colors.white),),
+                                      child: const Text("PARTNER WITH US",style: TextStyle(color: Colors.white),),
                                     );
                                   }
                                 ),
-                                SizedBox(height: 15,),
-                                Text("JOIN US",style: TextStyle(color: Colors.white),),
+                                const SizedBox(height: 15,),
+                                const Text("JOIN US",style: TextStyle(color: Colors.white),),
                               ],
                             ),
                           ),
@@ -851,8 +881,8 @@ class MyApp extends StatelessWidget {
                             ),
                           ),                        ],
                       ),
-                      SizedBox(height: 30,),
-                      Row(
+                      const SizedBox(height: 30,),
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("FUTURITE INNOVATIONS PRIVATE LIMITED",style: TextStyle(color: Colors.white),),
