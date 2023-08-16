@@ -490,7 +490,7 @@ class _MyAppState extends State<MyApp> {
                 'Thank you for your Interest',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Poppins' ,
                   fontSize: 20,
                   fontWeight: FontWeight.w300,
                 ),
@@ -663,7 +663,7 @@ class _MyAppState extends State<MyApp> {
                         Scaffold.of(context).openEndDrawer();
                       },
                       child: Image.asset(
-                        'assets/png 3 lines.png',
+                        'assets/Menu icon.png',
                         width: 36,
                         height: 36,
                       ),
@@ -926,7 +926,6 @@ class _MyAppState extends State<MyApp> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              const SizedBox(width: 140,),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Text("Who we are?",
@@ -935,6 +934,7 @@ class _MyAppState extends State<MyApp> {
                                     fontWeight: FontWeight.bold, // Set the font weight to bold
                                   ),),
                                 ),
+                              const SizedBox(height: 10,),
                                Padding(
                                  padding: const EdgeInsets.all(8.0),
                                  child: Text("Learnmire is committed to revolutionizing the\n"
@@ -947,6 +947,7 @@ class _MyAppState extends State<MyApp> {
                                      "learning tools to enhance the learning\n"
                                      "experience.",textAlign: TextAlign.right,style: GoogleFonts.poppins()),
                                ),
+                              const SizedBox(height: 10,),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
